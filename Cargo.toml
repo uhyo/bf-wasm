@@ -1,0 +1,10 @@
+[package]
+name = "bf-gen-interpreter"
+version = "0.1.0"
+authors = ["uhyo <uhyo@uhy.ooo>"]
+
+[lib]
+crate_type = ["cdylib"]
+
+[dependencies]
+
