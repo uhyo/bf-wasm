@@ -5,7 +5,8 @@
   "main": "dist/bundle.js",
   "types": "dist-types/index.d.ts",
   "scripts": {
-    "build": "run-s build:tsc build:webpack",
+    "build": "run-s build:wasm build:tsc build:webpack",
+    "build:wasm": "cargo build --target wasm32-unknown-unknown --release",
     "build:tsc": "tsc",
     "build:webpack": "webpack-cli",
     "watch": "run-p watch:tsc watch:webpack",

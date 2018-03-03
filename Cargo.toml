@@ -5,6 +5,3 @@ authors = ["uhyo <uhyo@uhy.ooo>"]
 
 [lib]
 crate_type = ["cdylib"]
-
-[dependencies]
-

@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  devtool:
-    process.env.NODE_ENV === 'production' ? undefined : 'eval-source-map',
+  devtool: process.env.NODE_ENV === 'production' ? undefined : undefined,
   entry: './dist-esm/index.js',
   target: 'node',
   output: {
@@ -13,6 +12,18 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.wasm$/,
+        use: [
+          {
+            loader: 'wasm-loader',
+            options: {
+              dce: 1,
+            },
+          },
+        ],
+        type: 'javascript/auto',
+      },
       {
         test: /\.rs$/,
         use: [
