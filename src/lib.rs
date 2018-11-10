@@ -1,6 +1,3 @@
-#![feature(universal_impl_trait)]
-#![feature(conservative_impl_trait)]
-
 extern {
   // imported from js
   #[allow(dead_code)]
