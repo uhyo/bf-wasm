@@ -67,9 +67,9 @@ export class BFInterpreter {
     );
     // Run!
     while (true) {
-      console.log('running');
+      // console.log('running');
       const result = funcs.run(outBufferPtr, this.outCapacity);
-      console.log('ran', result);
+      // console.log('ran', result);
       if (result >= 0) {
         // output is generated.
         yield* new Uint8Array(outBuffer.buffer, outBuffer.byteOffset, result);
