@@ -1,6 +1,6 @@
 {
   "name": "bf-wasm",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/bundle.js",
   "types": "dist-types/index.d.ts",
